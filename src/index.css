@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.961 0.008 91.5);
+  --foreground: oklch(0.22 0.016 256.8);
+  --card: oklch(0.985 0.005 95.1);
+  --card-foreground: oklch(0.22 0.016 256.8);
+  --popover: oklch(0.985 0.005 95.1);
+  --popover-foreground: oklch(0.22 0.016 256.8);
+  --primary: oklch(0.78 0.14 78);
+  --primary-foreground: oklch(0.24 0.045 70);
+  --secondary: oklch(0.934 0.011 89.7);
+  --secondary-foreground: oklch(0.239 0.021 264.1);
+  --muted: oklch(0.934 0.011 89.7);
+  --muted-foreground: oklch(0.495 0.029 263.2);
+  --accent: oklch(0.934 0.011 89.7);
+  --accent-foreground: oklch(0.239 0.021 264.1);
+  --border: oklch(0.901 0.014 88.7);
+  --input: oklch(0.901 0.014 88.7);
+  --ring: oklch(0.7 0.13 75);
+  --radius: 0.65rem;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.dark {
+  --background: oklch(0.176 0.014 258.4);
+  --foreground: oklch(0.92 0.009 84.6);
+  --card: oklch(0.239 0.021 264.1);
+  --card-foreground: oklch(0.92 0.009 84.6);
+  --popover: oklch(0.239 0.021 264.1);
+  --popover-foreground: oklch(0.92 0.009 84.6);
+  --primary: oklch(0.82 0.135 78);
+  --primary-foreground: oklch(0.2 0.04 70);
+  --secondary: oklch(0.324 0.023 264.2);
+  --secondary-foreground: oklch(0.92 0.009 84.6);
+  --muted: oklch(0.277 0.023 267.2);
+  --muted-foreground: oklch(0.704 0.021 263);
+  --accent: oklch(0.324 0.023 264.2);
+  --accent-foreground: oklch(0.92 0.009 84.6);
+  --border: oklch(0.92 0.01 90 / 9%);
+  --input: oklch(0.92 0.01 90 / 14%);
+  --ring: oklch(0.74 0.12 78);
+  --radius: 0.65rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: oklch(0.176 0.014 258.4);
+    --foreground: oklch(0.92 0.009 84.6);
+    --card: oklch(0.239 0.021 264.1);
+    --card-foreground: oklch(0.92 0.009 84.6);
+    --popover: oklch(0.239 0.021 264.1);
+    --popover-foreground: oklch(0.92 0.009 84.6);
+    --primary: oklch(0.82 0.135 78);
+    --primary-foreground: oklch(0.2 0.04 70);
+    --secondary: oklch(0.324 0.023 264.2);
+    --secondary-foreground: oklch(0.92 0.009 84.6);
+    --muted: oklch(0.277 0.023 267.2);
+    --muted-foreground: oklch(0.704 0.021 263);
+    --accent: oklch(0.324 0.023 264.2);
+    --accent-foreground: oklch(0.92 0.009 84.6);
+    --border: oklch(0.92 0.01 90 / 9%);
+    --input: oklch(0.92 0.01 90 / 14%);
+    --ring: oklch(0.74 0.12 78);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--sans);
+  --font-mono: var(--mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
