@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "@/components/ui/coming-soon-02-utils/sparkles";
 import wordmarkUrl from "@/assets/brand/cloudyako-wordmark.png";
+import wordmarkLightUrl from "@/assets/brand/cloudyako-wordmark-light.png";
 
 const HEADLINE = "Something new is on the way";
 
@@ -78,11 +79,14 @@ const ComingSoon02 = () => {
         data-slot="coming-soon-watermark"
         className="pointer-events-none absolute inset-x-0 top-[72%] -z-10 flex -translate-y-1/2 justify-center px-6"
       >
-        <img
-          src={wordmarkUrl}
-          alt=""
-          className="h-auto w-full max-w-[16rem] opacity-[0.6] dark:opacity-[0.12] sm:max-w-[20rem] md:max-w-[26rem] lg:max-w-[32rem]"
-        />
+        <picture className="contents">
+          <source media="(prefers-color-scheme: dark)" srcSet={wordmarkUrl} />
+          <img
+            src={wordmarkLightUrl}
+            alt=""
+            className="h-auto w-full max-w-[16rem] opacity-[0.6] dark:opacity-[0.12] sm:max-w-[20rem] md:max-w-[26rem] lg:max-w-[32rem]"
+          />
+        </picture>
       </div>
 
       <motion.div
