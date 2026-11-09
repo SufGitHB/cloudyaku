@@ -8,6 +8,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "@/components/ui/coming-soon-02-utils/sparkles";
+import InteractiveNeuralVortex from "@/components/ui/interactive-neural-vortex-background";
 import wordmarkUrl from "@/assets/brand/cloudyako-wordmark.png";
 import wordmarkLightUrl from "@/assets/brand/cloudyako-wordmark-light.png";
 
@@ -74,20 +75,7 @@ const ComingSoon02 = () => {
       data-slot="coming-soon"
       className="relative isolate flex min-h-svh flex-col items-center justify-start overflow-hidden bg-background pt-24"
     >
-      <div
-        aria-hidden
-        data-slot="coming-soon-watermark"
-        className="pointer-events-none absolute inset-x-0 top-[72%] -z-10 flex -translate-y-1/2 justify-center px-6"
-      >
-        <picture className="contents">
-          <source media="(prefers-color-scheme: dark)" srcSet={wordmarkUrl} />
-          <img
-            src={wordmarkLightUrl}
-            alt=""
-            className="h-auto w-full max-w-[16rem] opacity-[0.6] dark:opacity-[0.12] sm:max-w-[20rem] md:max-w-[26rem] lg:max-w-[32rem]"
-          />
-        </picture>
-      </div>
+      <InteractiveNeuralVortex className="-z-20" />
 
       <motion.div
         data-slot="coming-soon-body"
@@ -129,6 +117,15 @@ const ComingSoon02 = () => {
             Coming soon
           </Badge>
         </motion.div>
+
+        <picture data-slot="coming-soon-logo" className="contents">
+          <source media="(prefers-color-scheme: dark)" srcSet={wordmarkUrl} />
+          <img
+            src={wordmarkLightUrl}
+            alt="CloudYako logo"
+            className="h-auto w-full max-w-[12rem] lg:max-w-[14rem]"
+          />
+        </picture>
       </motion.div>
 
       <div
