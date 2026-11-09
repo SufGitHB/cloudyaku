@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "@/components/ui/coming-soon-02-utils/sparkles";
 import InteractiveNeuralVortex from "@/components/ui/interactive-neural-vortex-background";
-import wordmarkUrl from "@/assets/brand/cloudyako-wordmark.png";
-import wordmarkLightUrl from "@/assets/brand/cloudyako-wordmark-light.png";
+import wordmarkUrl from "@/assets/brand/cloudyako-wordmark.webp";
+import wordmarkLightUrl from "@/assets/brand/cloudyako-wordmark-light.webp";
 
 const HEADLINE = "Something new is on the way";
 
