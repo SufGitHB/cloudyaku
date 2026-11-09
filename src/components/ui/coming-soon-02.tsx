@@ -8,7 +8,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "@/components/ui/coming-soon-02-utils/sparkles";
-import wordmarkUrl from "@/assets/brand/cloudyaku-wordmark.png";
+import wordmarkUrl from "@/assets/brand/cloudyako-wordmark.png";
 
 const HEADLINE = "Something new is on the way";
 
@@ -105,7 +105,7 @@ const ComingSoon02 = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          CloudYaku brings cloud tools and business projects into the same space
+          CloudYako brings cloud tools and business projects into the same space
           I use to build and ship. We are finishing the last pieces now.
         </motion.p>
 

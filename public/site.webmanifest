@@ -1,7 +1,7 @@
 {
-  "name": "CloudYaku",
-  "short_name": "CloudYaku",
-  "description": "CloudYaku brings cloud tools and business projects into the same space I use to build and ship.",
+  "name": "CloudYako",
+  "short_name": "CloudYako",
+  "description": "CloudYako brings cloud tools and business projects into the same space I use to build and ship.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0d1117",
